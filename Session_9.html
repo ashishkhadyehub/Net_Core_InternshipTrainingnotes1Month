@@ -1,0 +1,171 @@
+<html lang="en">
+
+<head>
+    <title>Industrial Training</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+            width: 50%;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+            table-layout: fixed;
+        }
+
+        h2 {
+            color: #166b8c;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="#">
+            <h3>Industrial Training - Session 9</h3>
+        </a>
+
+
+
+    </nav>
+    
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <!-- <li>ASP.NET,ADO.NET Introduction</li> -->
+                    <li>Web forms</li>
+                    <li>Tags</li>
+                    <li>Attributes</li>
+                   
+                    <li>Master Pages</li>
+                    
+
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                
+<h2>ASP.NET Web Forms</h2>
+<ul>
+    <li>asp.net web form consist of server controls called as asp.net tags</li>
+    <li>All server controls must appear within a form tag, and the form tag must contain the runat="server" attribute.</li>
+    <li>The runat="server" attribute indicates that the form should be processed on the server. It also indicates that the enclosed controls can be accessed by server scripts</li>
+    <li>An .aspx page can only contain ONE form tag with runat="server" attribute</li>
+</ul>
+<hr>
+<h2>Web Form Structure</h2>
+<ul>
+    <li>Frond end file - (.aspx) contains frond end code i.e. html,css,JS etc</li>
+    <li>Designer file - (aspx.designer.cs) contains all the definition of the controls that are being used by the page - System generated code</li>
+    <li>Code Behind / Back end file - (aspx.cs) Contains all business logic / scripting language code i.e. C# code in asp.net</li>
+</ul>
+<hr>
+<h2>ASP.NET Web Form Tags</h2>
+<p>Open web form in design mode then click on view --> Click on toolbox (here you can see all asp.net server tags)</p>
+<p>Most used asp tags are</p>
+<ul>
+    <li>asp:label</li>
+    <li>asp:textbox</li>
+    <li>asp:button</li>
+    <li>asp:image</li>
+    <li>asp:dropdownlist</li>
+    <li>asp:checkbox</li>
+    <li>asp:linkbutton</li>
+    <li>asp:RadioButton</li>
+    <li>asp:fileupload</li>
+    <li>asp:calendar</li>
+     <li>Data Control - asp:gridview</li>
+    <li>Data Control -asp:Literal</li>
+    <li>Data Control -asp:Repeater etc.</li>
+</ul>
+<hr>
+<h2>ASP.NET Web Form Attributes</h2>
+<p>Most used asp attributes are</p>
+<ul>
+    <li>CssClass</li>
+    <li>ID</li>
+    <li>TextMode</li>
+    <li>AutoComplete</li>
+    <li>AutoPostBack</li>
+    <li>Text etc.</li>
+</ul>
+<hr>
+<h2>Master Pages in asp.net</h2>
+         <ul>
+             <li>ASP.NET master pages allow you to create a consistent layout for the pages in your application. A single master page defines the look and feel and standard behavior that you want for all of the pages (or a group of pages) in your application.</li>
+             <li>You can then create individual content pages that contain the content you want to display.</li>
+             <li>When users request the content pages, they merge with the master page to produce output that combines the layout of the master page with the content from the content page.</li>
+         </ul>
+         <p>Add Master Page from Add New Item --> Master Page then we can add child pages from Add New Item-->Web form with Master Page</p>
+                
+            </div>
+        </div>
+        
+
+       
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>

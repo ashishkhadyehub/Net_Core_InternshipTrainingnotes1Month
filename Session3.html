@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Industrial Training</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: #166b8c;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="#">
+            <h3>Industrial Training - Session 3</h3>
+        </a>
+
+
+
+    </nav>
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Bootstrap Introduction</li>
+                    <li>Advantages of Bootstrap</li>
+                    <li>How to get Bootstrap files ?</li>
+                    <li>Bootstrap container, row and grid system</li>
+                    <li>Bootstrap tables</li>
+                    <li>Bootstrap images</li>
+
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Bootstrap Introduction</h2>
+                <ul>
+                    <li>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive,
+                        mobile-first websites.</li>
+                    <li>Responsive web design is about creating web sites which automatically adjust themselves to look
+                        good on all devices, from small phones to large desktops.</li>
+                    <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+                    <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables,
+                        navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
+
+                </ul>
+                <hr>
+                <h2>Advantages of Bootstrap</h2>
+                <ul>
+                    <li><b>Easy to use:</b> It requires only basic knowledge of HTML and CSS</li>
+                    <li><b>Responsive design:</b> Bootstrap's responsive CSS adjusts to phones, tablets, and desktops
+                    </li>
+                    <li><b>Browser compatibility:</b> Bootstrap is compatible with all modern browsers</li>
+                </ul>
+                <hr>
+                <h2>How to get Bootstrap files ?</h2>
+                <h6>There are two ways to start using Bootstrap on your own web site.</h6>
+                <ul>
+                    <li>Download Bootstrap from getbootstrap.com (Official website)</li>
+                    <li>Include Bootstrap from a CDN</li>
+
+                </ul>
+                <h5>Example : Bootstrap CDN references</h5>
+                <pre class="language-html"><code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"&gt; 
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"&gt;&lt;/script&gt;  </code></pre>
+                <hr>
+                <h2>Bootstrap container, row and grid system</h2>
+                <h6><b>.container</b> class provides a responsive fixed width container</h6>
+                <h6><b>.container-fluid</b> class provides a full width container, spanning the entire width of the
+                    viewport</h6>
+                <h6><b>.row</b> provides the columns a place to live, maximum columns allowed in row is 12.</h6>
+                <h6><b>Bootstrap's grid system</b> allows up to 12 columns across the page.</h6>
+                <h6>Bootstrap's grid system is responsive, and the columns will re-arrange depending on the screen size
+                </h6>
+                <h5><b>Bootstrap Grid Classes</b></h5>
+                <ul>
+                    <li><b>xs</b> (for phones - screens less than 768px wide)</li>
+                    <li><b>sm</b> (for tablets - screens equal to or greater than 768px wide)</li>
+                    <li><b>md</b> (for small laptops - screens equal to or greater than 992px wide)</li>
+                    <li><b>lg</b> (for laptops and desktops - screens equal to or greater than 1200px wide)</li>
+                </ul>
+                <h5><b>Example :</b> Structure of Bootstrap Grid</h5>
+                <pre class="language-html"><code>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+    &lt;div class="col-*-*"&gt;&lt;/div&gt;
+    &lt;div class="col-*-*"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-*-*"&gt;&lt;/div&gt;
+    &lt;div class="col-*-*"&gt;&lt;/div&gt;
+    &lt;div class="col-*-*"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    ...
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <hr>
+                <h5><b>Example : Bootstrap Grid</b></h5>
+                <h5>Output :</h5>
+                <div class="row">
+                    <div class="col-md-4" style="height: 250px;background-color: rgb(233, 120, 120);"></div>
+                    <div class="col-md-4" style="height: 250px;background-color: rgb(238, 189, 98);"></div>
+                    <div class="col-md-4" style="height: 250px;background-color: yellowgreen;"></div>
+                </div>
+                <hr>
+                <h5>Code :</h5>
+                <pre class="language-html"><code>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+    &lt;div class="col-md-4" style="height: 250px;background-color: rgb(233, 120, 120);"&gt;&lt;/div&gt;
+    &lt;div class="col-md-4" style="height: 250px;background-color: rgb(238, 189, 98);"&gt;&lt;/div&gt;
+    &lt;div class="col-md-4" style="height: 250px;background-color: yellowgreen;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <hr>
+                <h2>Bootstrap tables</h2>
+                <h6><b>.table</b> class adds basic styling to a table</h6>
+                <h5><b>Example</b></h5>
+                <h5>Output:</h6>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ABC</td>
+                                <td>PQR</td>
+                                <td>abc@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>DEF</td>
+                                <td>HIJ</td>
+                                <td>def@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>XYZ</td>
+                                <td>ZXY</td>
+                                <td>xyz@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <h5>Code :</h6>
+                        <pre class="language-html"><code>&lt;table class="table"&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Firstname&lt;/th&gt;
+        &lt;th&gt;Lastname&lt;/th&gt;
+        &lt;th&gt;Email&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ABC&lt;/td&gt;
+        &lt;td&gt;PQR&lt;/td&gt;
+        &lt;td&gt;abc@example.com&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;DEF&lt;/td&gt;
+        &lt;td&gt;HIJ&lt;/td&gt;
+        &lt;td&gt;def@example.com&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;XYZ&lt;/td&gt;
+        &lt;td&gt;ZXY&lt;/td&gt;
+        &lt;td&gt;xyz@example.com&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        <h6><b>.table-striped and .table-bordered classes adds extra styling to .table</b></h6>
+                        <hr>
+                        <h2>Bootstrap images</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Output</th>
+                                        <th>Code</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h6>Rounded Corners :</h6>
+                                            <img src="https://revolutionit.in/img/slider/e2.jpg" style="height: 120px;" class="rounded" alt="">
+                                        </td>
+
+                                        <td>
+                                            
+                                            <pre class="language-html"><code>&lt;img src="https://revolutionit.in/img/slider/e2.jpg"  class="rounded" style="height: 100px;"  alt=""&gt;</code></pre>
+                                        </td>
+
+
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>Image in circle :</h6>
+                                            <img src="https://revolutionit.in/img/slider/e5.jpg" style="height: 120px;" class="rounded-circle" alt="">
+                                        </td>
+                                        <td>
+                                            <pre class="language-html"><code>&lt;img src="https://revolutionit.in/img/slider/e5.jpg"  class="rounded-circle" style="height: 100px;" alt=""&gt;</code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>Bordered Image :</h6>
+                                            <img src="https://revolutionit.in/img/slider/e1.jpg" style="height: 120px;" class="img-thumbnail" alt="">
+                                        </td>
+                                        <td>
+                                            <pre class="language-html"><code>&lt;img src="https://revolutionit.in/img/slider/e1.jpg"  class="img-thumbnail" style="height: 100px;" alt=""&gt;</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>

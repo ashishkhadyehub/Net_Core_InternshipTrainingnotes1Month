@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Industrial Training</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+            width: 50%;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+            table-layout: fixed;
+        }
+
+        h2 {
+            color: #166b8c;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+    <script>
+        function multiply(a, b) {
+            return a * b;
+        }
+        console.log("I am example of Function");
+        console.log(multiply(5, 5));
+
+        console.log("I am example of localStorage");
+        // Store
+        localStorage.setItem("Company", "Revolution IT Solutions");
+        // Retrieve
+        let company = localStorage.getItem("Company");
+        console.log(company);
+        //check log in browser for output
+
+        console.log("I am example of localStorage with JSON");
+        // Create object:
+        let student = { rollno: 71, standard: 10 };
+        localStorage.setItem(student, JSON.stringify(student));
+        // Read Object:
+        let item = JSON.parse(localStorage.getItem(student));
+        console.log(item);
+
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="#">
+            <h3>Industrial Training - Session 6</h3>
+        </a>
+
+
+
+    </nav>
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Functions in JavaScript</li>
+                    <li>HTML Element Selectors In JavaScript</li>
+                    <li>Local Storage in JavaScript</li>
+                    <li>Manipulating HTML using JavaScript</li>
+                    <li>EventListener in JavaScript</li>
+                    <li>Small Application (Creating own Phonebook) using HTML,CSS,Bootstrap,JavaScript</li>
+
+
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Functions in JS</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h6>function is a group of reusable code which can be called anywhere in the program.</h6>
+                <h5><b>Example :</b></h5>
+                <pre class="language-javascript"><code>function multiply(a, b) 
+{
+return a * b;
+}
+console.log(multiply(5,5));
+//check log in browser for output</code></pre>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>HTML Element Selectors In JS</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h6>JavaScript is most commonly used to update the content or value of the HTML (DOM-Document Object
+                    Model) elements</h6>
+                <h6>To update the HTML DOM, we need to select elemnts in our JavaScript program</h6>
+                <h5><b>Example : Different ways of selecting the elements on a page </b></h5>
+                <pre class="language-javascript"><code>// Syntax to select element whose id is demoelement
+var a = document.getElementById(demoelement);
+//Syntax to select element whose id is myclass
+document.querySelector('#myclass');
+//Syntax to select first element whose class is myclass
+document.querySelector('.myclass');
+//Syntax to select first li element
+document.querySelector('li');</code></pre>
+                <hr>
+                <h5><b>Example : Multiple Element Selector</b></h5>
+                <pre class="language-javascript"><code>// Syntax to select all elements whose class card
+document.querySelectorAll('.class')
+//Syntax to select all p element whose class is center
+document.querySelectorAll("p.center");</code></pre>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Local Storage in JS</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h6>The localStorage object stores data in browser memory with no expiration date.</h6>
+                <h6>The localStorage allows us to save the key/value pairs in a web browser</h6>
+                <h5><b>Example :</b></h5>
+                <pre class="language-javascript"><code>// Store
+localStorage.setItem("Company", "Revolution IT Solutions");
+// Retrieve
+let company = localStorage.getItem("Company");
+console.log(company);
+//check log in browser for output</code></pre>
+                <hr>
+                <h6>Only strings can be stored with localStorage or sessionStorage, but we can use JSON.stringify to
+                    store more complex objects and JSON.parse to read them.</h6>
+                <h6> <b>JSON - JavaScript Object Notation</b> is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications</h6>
+                <h5><b>Example :</b></h5><pre class="language-javascript"><code>// Create object:
+let student = { rollno: 71, standard: 10 };
+localStorage.setItem(key, JSON.stringify(student));
+// Read Object:
+let item = JSON.parse(localStorage.getItem(student));
+console.log(item);
+//check log in browser for output</code></pre>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Manipulating HTML using JavaScript</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h6>As we have seen, we can update / manipulate HTML using JavaScript</h6>
+                <h5><b>Example :</b></h5><pre class="language-javascript"><code>let a = document.getElementById("demoelement");
+a.style.color = "red";
+a.className = "card";
+a.innerText = "Welcome to JavaScript Session";
+a.innerHTML = "<b>Revolution IT Solutions</b>";</code></pre>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>EventListener in JavaScript</h2>
+                <h6>The addEventListener() method allows you to add event listeners (to perform required action) on any HTML element</h6>
+                <h5><b>Example:</b></h5><pre class="language-javascript"><code>//Code to show current date on user click (event)
+&lt;button id="showDate"&gt;Show Date&lt;/button&gt;
+&lt;p id="dateinfo"&gt;&lt;/p&gt;
+document.getElementById("showDate").addEventListener("click", displayDate);
+function displayDate() 
+{
+document.getElementById("dateinfo").innerHTML = Date();
+}</code></pre>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Small Web Application using HTML,CSS,Bootstrap,Javascript</h2>
+                <h3>We have to create web application to store and view Name and Contact Number</h3>
+                <h4 style="text-align: center;"><a href="Phonebook.html" class="btn btn-info" target="_blank">Click here to Show final Output</a></h4>
+            </div>
+            
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Steps to develop this project</h2>
+                <ol>
+                    <li>Design html webpage - Add new contact form,Design of contact list</li>
+                    <li>Create external JS file</li>
+                    <li>Save new contact in localStorage</li>
+                    <li>Show contacts saved in localStorage</li>
+                    <li>Delete contact from localStorage</li>
+                    <li>Search functionality</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>

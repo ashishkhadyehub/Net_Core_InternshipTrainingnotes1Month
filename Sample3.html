@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showmsg()" >click now</button>
+    <button id="btntest">click 1</button>
+    <p id="para1"></p>
+    <script>
+        function showmsg()
+        {
+            alert("Button is clicked");
+        }
+        document.getElementById("btntest").addEventListener("click",showmsg);
+        document.getElementById("para1").innerHTML="testing testingtestingtestingtestingtestingtestingtestingtestingtesting";
+        console.log("Hello from JS");
+    </script>
+    <script src="ext04sept.js"></script>
+</body>
+</html>

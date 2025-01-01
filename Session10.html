@@ -1,0 +1,404 @@
+<html lang="en">
+
+<head>
+    <title>Industrial Training</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+            width: 50%;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+            table-layout: fixed;
+        }
+
+        h2 {
+            color: #166b8c;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="#">
+            <h3>Industrial Training - Session 10</h3>
+        </a>
+
+
+
+    </nav>
+    
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>IsPostback Property</li>
+                    <li>Viewstate</li>
+                    <li>Session state</li>
+                    <li>Query string</li>
+                   
+                    <li>OnClick event</li>
+                    
+
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>IsPostBack - Page Property</h2>
+<p>IsPostBack Gets a value that indicates whether the page is being rendered for the first time or is being loaded in response to a postback.</p>
+<p>It returns boolean value-true if the page is being loaded in response to a client postback; otherwise, false.</p>
+<h5>Example :</h5>
+<p>We need to bind values to city dropdown list on page load</p>
+<h6>Frond-End code</h6>
+<pre class="language-html"><code>     &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head runat="server"&gt;
+        &lt;title&gt;IsPostBack Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form id="form1" runat="server"&gt;
+        &lt;div style="margin-top:50px"&gt;
+            &lt;h3&gt;IsPostBack Example&lt;/h3&gt;
+        &lt;asp:Button runat="server" OnClick="btnrefresh_Click" ID="btnrefresh" Text="Postback Request" /&gt;
+            &lt;br /&gt;
+            &lt;asp:DropDownList runat="server" style="margin-top:15px" ID="ddlcity"&gt;&lt;/asp:DropDownList&gt;
+        &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+<h6>Back-End code</h6>
+<pre class="language-clike"><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+    
+    namespace Training
+    {
+        public partial class ispostback : System.Web.UI.Page
+        {
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                if (!IsPostBack)
+                {
+                    Response.Write("Page is loaded for first time..!");
+                    bindddl();
+                }
+    
+            }
+    
+            protected void bindddl()
+            {
+                ListItem li1 = new ListItem("Kolhapur");
+                ddlcity.Items.Add(li1);
+    
+                ListItem li2 = new ListItem("Pune");
+                ddlcity.Items.Add(li2);
+    
+                ListItem li3 = new ListItem("Mumbai");
+                ddlcity.Items.Add(li3);
+    
+                ListItem li4 = new ListItem("Delhi");
+                ddlcity.Items.Add(li4);
+            }
+    
+            protected void btnrefresh_Click(object sender, EventArgs e)
+            {
+    
+            }
+        }
+    }</code></pre>
+    <hr>
+    <h2>Viewstate</h2>
+         <p>The ViewState property provides a dictionary object for retaining values between multiple requests for the same page. This is the default method that the page uses to preserve page and control property values between round trips.</p>
+         <h5>Example :</h5>
+         <h6>Frond-End code</h6>
+         <pre class="language-html"><code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head runat="server"&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form id="form1" runat="server"&gt;
+    &lt;div&gt;
+        &lt;h3&gt;ViewState Example&lt;/h3&gt;
+    &lt;asp:TextBox runat="server" ID="txtcount"&gt;&lt;/asp:TextBox&gt;
+    &lt;asp:Button runat="server" Text="Click" ID="btnclick" OnClick="btnclick_Click"  /&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h6>Back-End code</h6>
+<pre class="language-clike"><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+    
+    namespace Training
+    {
+        public partial class ViewState2 : System.Web.UI.Page
+        {
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                if (!IsPostBack)
+                {
+                    if (ViewState["Clicks"] == null)
+                    {
+                        ViewState["Clicks"] = 0;
+                    }
+                    txtcount.Text = ViewState["Clicks"].ToString();
+                }
+            }
+    
+            protected void btnclick_Click(object sender, EventArgs e)
+            {
+                int count = (int)ViewState["Clicks"] + 1;
+                txtcount.Text = count.ToString();
+                ViewState["Clicks"] = count;
+            }
+        }
+}</code></pre>
+         <hr>
+         <h2>Session State</h2>
+         <p>Session State is another state management technique to store state, meaning it helps in storing and using values from previous requests. Whenever the user requests a web form from a web application it will get treated as a new request. an ASP.NET session will be used to store the previous requests for a specified time period.</p>
+         <h6>Front-End Code</h6>
+         <pre class="language-html"><code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+            &lt;head runat="server"&gt;
+                &lt;title&gt;&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;form id="form1" runat="server"&gt;
+                &lt;div&gt;
+                    &lt;h3&gt;Session Example&lt;/h3&gt;
+                &lt;asp:TextBox&gt; runat="server" ID="txtcount"&gt;&lt;/asp:TextBox&gt;
+                &lt;asp:Button runat="server" Text="Click" ID="btnclick" OnClick="btnclick_Click"  /&gt;
+                &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </code></pre>
+            <h6>Back-End code</h6>
+            <pre class="language-clike"><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+                
+                namespace Training
+                {
+                    public partial class Session1 : System.Web.UI.Page
+                    {
+                        protected void Page_Load(object sender, EventArgs e)
+                        {
+                            if (!IsPostBack)
+                            {
+                                if (Session["Clicks"] == null)
+                                {
+                                    Session["Clicks"] = 0;
+                                }
+                                txtcount.Text = Session["Clicks"].ToString();
+                            }
+                        }
+                
+                        protected void btnclick_Click(object sender, EventArgs e)
+                        {
+                            int count = (int)Session["Clicks"] + 1;
+                            txtcount.Text = count.ToString();
+                            Session["Clicks"] = count;
+                        }
+                    }
+                }</code></pre>
+         <p>You can access count value in another web pages also</p>
+         <hr>
+         <h2>Query String in ASP.NET</h2>
+          <ul>
+            <li>Querystrings are name/value collection pairs</li>
+            <li>
+              Using querystrings, is a very comman way to send data from one
+              webform to another.
+            </li>
+            <li>Query strings are appended to the page URL.</li>
+            <li>
+              In page URL, ?(Question Mark), indicates the beginning of a query
+              string and it's value.
+            </li>
+            <li>
+              It is possible to use more than one query string. The first query
+              string is specified using the ?(question mark). Subsequent query
+              strings can be appended to the URL using the &(ampersand) symbol.
+            </li>
+            <li>
+              Query strings are visible to the user, hence should not be used to
+              send sensitive information, unless encrypted.
+            </li>
+            <li>
+              To read the query string value, use Request object's QueryString
+              property.
+            </li>
+          </ul>
+          <h5>Example :</h5>
+          <h6>Frond-End code</h6>
+          <pre class="language-html"><code>//File1
+    &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head runat="server"&gt;
+        &lt;title&gt;Query String Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form id="form1" runat="server"&gt;
+        &lt;div&gt;
+        &lt;h3&gt;Query String Example&lt;/h3&gt;
+            &lt;label&gt;Name :&lt;/label&gt;&lt;br /&gt;
+            &lt;asp:TextBox runat="server" ID="txtname"&gt;&lt;/asp:TextBox&gt;&lt;br /&gt;
+              &lt;label&gt;Email :&lt;/label&gt;&lt;br /&gt;
+             &lt;asp:TextBox runat="server" ID="txtmail"&gt;&lt;/asp:TextBox&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;asp:Button runat="server" ID="btnsubmit" OnClick="btnsubmit_Click" Text="Go to other webform" /&gt;
+        &lt;/div&gt;
+        
+        &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+
+    //File2
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head runat="server"&gt;
+    &lt;title&gt;Query String Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form id="form1" runat="server"&gt;
+    &lt;div&gt;
+     &lt;h3&gt;Query String Example&lt;/h3&gt;
+        &lt;label&gt;Name :&lt;/label&gt; &lt;asp:Label&gt; runat="server" ID="lblname"&gt;&lt;/asp:Label&gt;&lt;br /&gt;
+        &lt;label&gt;Email :&lt;/label&gt; &lt;asp:Label&gt; runat="server" ID="lblemail"&gt;&lt;/asp:Label&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <h6>Back-End code</h6>
+          <pre class="language-clike"><code>//File 1 Code Behind
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+    
+    namespace Training
+    {
+        public partial class QueryString1 : System.Web.UI.Page
+        {
+            protected void Page_Load(object sender, EventArgs e)
+            {
+    
+            }
+    
+            protected void btnsubmit_Click(object sender, EventArgs e)
+            {
+                Response.Redirect("QueryString2.aspx?Name="+txtname.Text+"&Email="+txtmail.Text+"");
+            }
+        }
+    }
+
+//File2 Code behind
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Training
+{
+    public partial class QueryString2 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            lblname.Text = Request.QueryString["Name"];
+            lblemail.Text = Request.QueryString["Email"];
+        }
+    }
+}</code></pre>
+<hr>
+<h2>ASP.NET Button Event : OnClick</h2>
+          <ul>
+            <li>
+              Button OnClick() method raises the click event of the button
+              control.
+            </li>
+            <li>
+              Button Click event occurs when the button control is clicked
+            </li>
+          </ul>
+            </div>
+        </div>
+        
+
+       
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>

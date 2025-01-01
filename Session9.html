@@ -1,0 +1,501 @@
+<html lang="en">
+
+<head>
+    <title>Industrial Training</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+            width: 50%;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+            table-layout: fixed;
+        }
+
+        h2 {
+            color: #166b8c;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="#">
+            <h3>Industrial Training - Session 8</h3>
+        </a>
+
+
+
+    </nav>
+    
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>C# - Introduction</li>
+                    <li>Variables</li>
+                    <li>Data Types</li>
+                    <li>ASP.NET Introduction</li>
+                    <li>ADO.NET Introduction</li>
+                    <li>ASP.NET Web Forms Application</li>
+                    <!-- <li>If..else</li>
+                   
+                    <li>Loops</li>
+                    <li>Inheritance</li>
+<li>Polymorphism</li>
+<li>Abstraction</li> -->
+
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                
+                <h2>Introduction to C#</h2>
+           <p>It is an object-oriented programming language created by Microsoft that runs on the .NET Framework.</p>
+           <p>C# has roots from the C family, and the language is close to other popular languages like C++ and Java.</p>
+           <p>C# is used to develop web apps, desktop apps, mobile apps, games and much more.</p>
+<hr>
+<h2>Why use C# ?</h2>
+<ul>
+    <li>It is one of the most popular programming language in the world</li>
+    <li>It has a huge community support</li>
+    <li>C# is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs.</li>
+    <li>As C# is close to C, C++ and Java, it makes it easy for programmers to switch to C# or vice versa</li>
+</ul>
+<hr>
+<h2>C# Syntax</h2>
+<p>We can use below code to print "Hello World" on the console/screen</p>
+           <h3>Example :</h3>
+           <pre class="language-clike"><code>using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+      static void Main(string[] args)
+      {
+        Console.WriteLine("Hello World!");    
+      }
+    }
+}</code></pre>
+<ul>
+    <li><b>Line 1:</b> using System means that we can use classes from the System namespace.</li>
+    <li><b>Line 2:</b> A blank line. C# ignores white space. However, multiple lines makes the code more readable.</li>
+    <li><b>Line 3:</b> namespace is used to organize your code, and it is a container for classes and other namespaces.</li>
+    <li><b>Line 4:</b> The curly braces {} marks the beginning and the end of a block of code.</li>
+    <li><b>Line 5:</b> class is a container for data and methods, which brings functionality to your program. Every line of code that runs in C# must be inside a class. In our example, we named the class Program.</li>
+</ul>
+<hr>
+
+<h2>C# variables</h2>
+<p>Variables are containers for storing data values.</p>
+<p>In C#, there are different types of variables like int,double,string,bool etc.</p>
+<p>To create a variable, you must specify the type and assign it a value</p>
+<p>However, you can add the const keyword if you don't want others (or yourself) to overwrite existing values (this will declare the variable as "constant", which means unchangeable and read-only):</p>
+<pre class="language-clike"><code>string name = "Shree";
+    
+int myNum = 15;
+
+const int myNumb = 95;
+</code></pre>
+<hr>
+<h2>C# Data Types</h2>
+<p>A data type specifies the size and type of variable values. It is important to use the correct data type for the corresponding variable; to avoid errors, to save time and memory, but it will also make your code more maintainable and readable. The most common data types are:</p>
+<table class="table table-bordered">
+    <tbody><tr>
+    <th style="width:20%">Data Type</th>
+    <th style="width:17%">Size</th>
+    <th style="width:63%">Description</th>
+    </tr>
+    <tr>
+    <td>int</td>
+    <td>4 bytes</td>
+    <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+    </tr>
+    <tr>
+    <td>long</td>
+    <td>8 bytes</td>
+    <td>Stores whole numbers from -9,223,372,036,854,775,808 to 
+    9,223,372,036,854,775,807</td>
+    </tr>
+    <tr>
+    <td>float</td>
+    <td>4 bytes</td>
+    <td>Stores fractional numbers. Sufficient for 
+    storing 6 to 7 decimal digits</td>
+    </tr>
+    <tr>
+    <td>double</td>
+    <td>8 bytes</td>
+    <td>Stores fractional numbers. Sufficient for 
+    storing 15 decimal digits</td>
+    </tr>
+    <tr>
+    <td>bool</td>
+    <td>1 bit</td>
+    <td>Stores true or false values</td>
+    </tr>
+    <tr>
+    <td>char</td>
+    <td>2 bytes</td>
+    <td>Stores a single character/letter, surrounded by single quotes</td>
+    </tr>
+    <tr>
+    <td>string</td>
+    <td>2 bytes per character</td>
+    <td>Stores a sequence of characters, surrounded by double quotes</td>
+    </tr>
+    
+    </tbody>
+    </table>
+    <hr>
+    <h2>ASP.NET Introduction</h2>
+          <ul>
+              <li>ASP.NET is a web application framework developed and marketed by Microsoft to allow programmers to build dynamic web sites. It allows you to use a full featured programming language such as C# or VB.NET to build web applications easily.</li>
+<li>.NET is a developer platform made up of tools, programming languages, and libraries for building many different types of applications.</li>
+<li>ASP.NET provides Base libraries for working with strings, dates, files/IO, and more.</li>
+<li>When using ASP.NET your back end code, such as business logic and data access, is written using C#.</li>
+<li>We can use the large ecosystem of packages and libraries available to all .NET developers. You can also author your own libraries that are shared between any applications written on the .NET platform.</li>
+<li>ASP.NET apps can be developed and run on Windows, Linux, macOS, etc.</li>
+<li>ASP.Net is designed to work with the HTTP protocol. This is the standard protocol used across all web applications.</li>
+          </ul>
+          <img src="Images/net5-platform.png" class="img-thumbnail" style="width: 100%;">
+          <hr>
+          <h2>ADO.NET Introduction</h2>
+         <ul>
+             <li>ADO.NET is a data access technology from the Microsoft . NET Framework that provides communication between relational and non-relational systems through a common set of components.</li>
+             <li>The .NET Framework includes its own data access technology i.e. ADO.NET.</li>
+             <li>ADO.NET is a large set of .NET classes that enable us to retrieve and manipulate data, and update data sources, in very many ways.</li>
+             <li>ADO.NET consists of managed classes that allows .NET applications to connect to data sources such as Microsoft SQL Server, Microsoft Access, Oracle, XML, etc.</li>
+             <li>It uses disconnected data architecture which is easy to scale as it reduces the load on the database. Everything is handled on the client-side, so it improves performance.</li>
+             <li>As it uses disconnected data access, applications do not retain database lock connections for a longer time. Thus, it accommodates scalability by encouraging programmers to conserve limited resources and allow users to access data simultaneously.</li>
+
+         </ul>
+         <hr>
+         <h2>Creating ASP.NET Application</h2>
+         <ul>
+          <li>Install Visual Studio (While installing check - <b>.NET Framework project and item templates</b> ) under Individual Component tab </li>
+          <li>In Visual Studio - Create New Project - ASP.NET Web Application (.NET Framework) - Enter Project & Solution Name - Select Location - Create - Empty - Create</li>
+          <li>Working with - HTML/CSS/JS files</li>
+         </ul>
+
+    <!-- <hr>
+    <h2>If ... Else</h2>
+    <p>We can use conditions to perform different actions for different decisions.</p>
+    
+    <ul>
+        <li><b>if : </b>use to specify a block of code to be executed, if a specified condition is true</li>
+        <li><b>else : </b>use to specify a block of code to be executed, if the same condition is false</li>
+        <li><b>else if : </b>use to specify a new condition to test, if the first condition is false</li>
+        
+    </ul>
+   <h3>Example :</h3>
+   <pre class="language-clike"><code>int time = 22;
+if (time < 10) 
+{
+Console.WriteLine("Good morning.");
+} 
+else if (time < 20) 
+{
+Console.WriteLine("Good day.");
+} 
+else 
+{
+Console.WriteLine("Good evening.");
+}
+// Outputs "Good evening."
+
+//shorthand if..else
+int time = 20;
+string result = (time < 18) ? "Good day." : "Good evening.";
+Console.WriteLine(result);</code></pre>
+<hr>
+<h2>While and Do..While Loop</h2>
+<p>The while loop loops through a block of code as long as a specified condition is True</p>
+<p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+<h3>Example :</h3>
+<pre class="language-clike"><code>int i = 0;
+while (i < 5) 
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+int i = 0;
+do 
+{
+    Console.WriteLine(i);
+    i++;
+}
+while (i < 5);</code></pre>
+<hr>
+<h2>For Loop</h2>
+<p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop</p>
+<pre class="language-clike"><code>for (int i = 0; i < 5; i++) 
+{
+    Console.WriteLine(i);
+}</code></pre>
+<hr>
+<h2>Foreach Loop</h2>
+<p>There is also a foreach loop, which is used exclusively to loop through elements in an array</p>
+<pre class="language-clike"><code>string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+foreach (string i in cars) 
+{
+    Console.WriteLine(i);
+}</code></pre>
+<hr>
+<h2>Break and Continue</h2>
+<p>The break statement can also be used to jump out of a loop.</p>
+<p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+<pre class="language-clike"><code>//This example jumps out of the loop when i is equal to 4
+for (int i = 0; i < 10; i++) 
+{
+    if (i == 4) 
+    {
+    break;
+    }
+    Console.WriteLine(i);
+}
+
+//This example skips the value of 4
+for (int i = 0; i < 10; i++) 
+{
+    if (i == 4) 
+    {
+    continue;
+    }
+    Console.WriteLine(i);
+}</code></pre>
+<hr>
+<h2>Inheritance</h2>
+            <p>In C#, it is possible to inherit fields and methods from one class to another. We group the "inheritance concept" into two categories:</p>
+
+           <ul>
+               <li><b>Derived Class (child)</b> - the class that inherits from another class</li>
+               <li><b>Base Class (parent)</b> - the class being inherited from</li>
+               
+               
+           </ul>
+           <p>To inherit from a class, use the : symbol.</p>
+           <p>If you don't want other classes to inherit from a class, use the sealed keyword</p>
+           <h3>Example :</h3>
+         <pre class="language-clike"><code>//Vehicle.cs
+using System;
+
+namespace MyApplication
+{
+    class Vehicle  // Base class
+    {
+    public string brand = "Ford";  // Vehicle field
+    public void honk()             // Vehicle method 
+    {
+        Console.WriteLine("Welcome");
+    }
+    }
+}
+
+//Car.cs
+using System;
+
+namespace MyApplication
+{
+  class Car : Vehicle  // Derived class
+  {
+    public string modelName = "Mustang";  // Car field
+  }
+}
+
+//Program.cs
+using System;
+
+namespace MyApplication
+{
+  class Program
+  { 
+    static void Main(string[] args)
+    {
+      // Create a myCar object
+      Car myCar = new Car();
+
+      // Call the honk() method (From the Vehicle class) on the myCar object
+      myCar.honk();
+
+      // Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class
+      Console.WriteLine(myCar.brand + " " + myCar.modelName);
+    }
+  }
+}
+
+//Output - Welcome Ford Mustang
+
+//Sealed Class
+sealed class Vehicle 
+{
+  ...
+}
+
+         </code></pre>
+<hr>
+<h2>Polymorphism</h2>
+<p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
+<p>Inheritance lets us inherit fields and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.</p>
+<p>C# provides an option to override the base class method, by adding the virtual keyword to the method inside the base class, and by using the override keyword for each derived class methods</p>
+<h3>Example</h3>
+<pre class="language-clike"><code>using System;
+
+namespace MyApplication
+{
+  class Animal  // Base class (parent) 
+  {
+    public virtual void animalSound()
+    {
+      Console.WriteLine("The animal makes a sound");
+    }
+  }
+
+  class Pig : Animal  // Derived class (child) 
+  {
+    public override void animalSound()
+    {
+      Console.WriteLine("The pig says: wee wee");
+    }
+  }
+
+  class Dog : Animal  // Derived class (child) 
+  {
+    public override void animalSound()
+    {
+      Console.WriteLine("The dog says: bow wow");
+    }
+  }
+
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Animal myAnimal = new Animal();  // Create a Animal object
+      Animal myPig = new Pig();  // Create a Pig object
+      Animal myDog = new Dog();  // Create a Dog object
+      
+      myAnimal.animalSound();
+      myPig.animalSound();
+      myDog.animalSound();
+    }
+  }
+}
+</code></pre>
+<hr>
+<h2>Abstraction</h2>
+<p>Data abstraction is the process of hiding certain details and showing only essential information to the user. Abstraction can be achieved with either abstract classes or interfaces</p>
+<ul>
+    <li>Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</li>
+    <li>can only be used in an abstract class, and it does not have a body. The body is provided by the derived class (inherited from).</li>
+</ul>
+<h3>Example</h3>
+<pre class="language-clike"><code>  using System;
+
+    namespace MyApplication
+    {
+      // Abstract class
+      abstract class Animal
+      {
+        // Abstract method (does not have a body)
+        public abstract void animalSound();
+        // Regular method
+        public void sleep()
+        {
+          Console.WriteLine("Zzz");
+        }
+      }
+      
+      // Derived class (inherit from Animal)
+      class Pig : Animal
+      {
+        public override void animalSound()
+        {
+          // The body of animalSound() is provided here
+          Console.WriteLine("The pig says: wee wee");
+        }
+      }
+    
+      class Program
+      {
+        static void Main(string[] args)
+        {
+          Pig myPig = new Pig();  // Create a Pig object
+          myPig.animalSound();
+          myPig.sleep();
+        }
+      }
+    }</code></pre> -->
+            </div>
+        </div>
+        
+
+       
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Industrial Training</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+            width: 50%;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+            table-layout: fixed;
+        }
+
+        h2 {
+            color: #166b8c;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+    <script>
+        console.log("I am example of Array");
+        //There are two ways to declare Array
+        let cities = new Array();
+        
+        cities = ['Kolhapur', 'Pune', 'Mumbai']
+        //How to access array elements
+        console.log(cities[0])
+        console.log(cities[1])
+        //check log in browser for output
+
+        //There are two ways to declare Object
+        console.log("I am example of Object");
+        let car = new Object();
+       
+        car = {
+            name: "A7",
+            brand: "Audi",
+            capacity: 5
+        };
+        //How to access properties of an Object
+        console.log(car['name'])
+        console.log(car['brand'])
+//check log in browser for output
+
+console.log("I am example of if...else statement");
+let age = 25;
+if( age > 18)
+{
+console.log("My age is greater than 18");
+}
+else
+{
+console.log("My age is less than or 18");
+}
+//check log in browser for output
+
+console.log("I am example of if..else if..else statement");
+let age1 = 25;
+if( age1 > 21)
+{
+console.log("My age is greater than 21");
+}
+else if(age1 >30)
+{
+console.log("My age is greater than 30");
+}
+else
+{
+console.log("My age is less than 21");
+}
+//check log in browser for output
+
+console.log("I am example of for loop");
+for(var j=1; j<=7; j++) 
+{
+console.log(j);
+}
+//check log in browser for output
+
+console.log("I am example of for in loop");
+var person = {name: "Shree", language: "JavaScript", age: 28};
+for(var p in person) 
+{  
+console.log( p + " = " + person[p]); 
+}
+//check log in browser for output
+
+console.log("I am example of foreach loop");
+const  evenno = [2,4,6,8,10];
+for (let i = 0; i < evenno.length; i++) 
+{
+console.log(evenno[i]);
+}
+
+ evenno.forEach(showen);
+ 
+ function showen(item, index)
+ {
+ console.log(item);
+ }
+
+//check log in browser for output
+
+console.log("I am example of while in loop");
+let x = 1, y = 6;
+while (x <= y) 
+{
+console.log(x);
+x += 1;
+}
+//check log in browser for output
+
+console.log("I am example of do..while in loop");
+let a = 1;
+let b =3;
+do {
+console.log(a);
+a++;
+} while(a <= b);
+//check log in browser for output
+
+
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="#">
+            <h3>Industrial Training - Session 5</h3>
+        </a>
+
+
+
+    </nav>
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>JavaScript Introduction</li>
+                    <li>Simple JavaScript Examples</li>
+                    <li>Data Types, Variables in JavaScript</li>
+                    <li>Arrays and Objects in JavaScript </li>
+                    <li>if..else statement in JavaScript</li>
+                    <li>Loops in JavaScript</li>
+
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>JavaScript Introduction</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <ul>
+                    <li>JavaScript is mainly used to program the behavior of web pages</li>
+                    <li>Using JavaScript, we can change and update HTML and CSS.</li>
+                    <li>Javascript frameworks (e.g. - node.js) also can be used to develop dynamic web applications.
+                    </li>
+                    <li>JavaScript can be use to implement API, web services etc.</li>
+
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Simple JavaScript Examples</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Output</th>
+                                <th>Code</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p id="demo">JavaScript can change my content.</p>
+
+                                    <button type="button"
+                                        onclick='document.getElementById("demo").innerHTML = "Hello, Welcome to Revolution IT Solutions!"'>Click
+                                        to change content!</button>
+                                </td>
+                                <td>
+                                    <pre
+                                        class="language-html"><code>&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'&gt;Click Me!&lt;/button&gt;</code></pre>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">
+                                        Click me to display Date and Time.</button>
+
+                                    <p id="demo1"></p>
+                                </td>
+                                <td>
+                                    <pre class="language-html"><code>&lt;button type="button" onclick="document.getElementById('demo1').innerHTML = Date()"&gt; Click me to display Date and Time.&lt;/button&gt;
+&lt;p id="demo1"&gt;&lt;/p&gt;</code></pre>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Data Types, Variables in JavaScript</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h6>JavaScript has <b>dynamic types.</b> This means that the same variable can be used to hold different
+                    data types</h5>
+                    <ul>
+                        <li><b>let</b> - We can change its values, but it cannot be redeclared in the same scope.</li>
+                        <li><b>const</b> - It is a variable type assigned to data whose value cannot and will not be
+                            changed throughout the program</li>
+                        <li>A variable name cannot start with a number.</li>
+                    </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Arrays and Objects in JavaScript</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <h6>These are reference data types in JS</h6>
+                <h5>Arrays are the objects in which we can store multiple values in a single variable</h6>
+                <pre class="language-javascript"><code>//There are two ways to declare Array
+let cities = new Array();
+let cities = [];
+cities =['Kolhapur', 'Pune', 'Mumbai']
+//How to access array elements
+console.log(cities[0])
+console.log(cities[1])
+//check log in browser for output</code></pre>
+                <h5>Object holds multiple values, arrays, functions etc.</h6>
+                <pre class="language-javascript"><code>//There are two ways to declare Object
+let car = new Object();
+let car = {};
+car = { 
+    name: "A7",
+    brand: "Audi",
+    capacity: 5
+  };
+//How to access properties of an Object
+console.log(car['name'])
+console.log(car['brand'])
+//check log in browser for output</code></pre>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>if..else statement in JavaScript</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <h6>if..else and if..else if..else are conditional statements in JavaScript</h6>
+                <h6>Conditional statements are used to decide the execution flow, based on different conditions</h6>
+                <h5><b>Example :</b> if..else statement</h6>
+                <pre class="language-javascript"><code>let age = 25;
+if( age > 18)
+{
+console.log("My age is greater than 18");
+}
+else
+{
+console.log("My age is less than or 18");
+}
+//check log in browser for output</code></pre>
+                <h6>We can use "else if" condition when we want to apply second level conditions after the if statement</h6>
+                <h5><b>Example :</b> if..else if..else statement</h6>
+                <pre class="language-javascript"><code>let age = 25;
+if( age > 18)
+{
+console.log("My age is greater than 18");
+}
+else if(age >21)
+{
+console.log("My age is greater than 21");
+}
+else
+{
+console.log("My age is less than 18");
+}
+//check log in browser for output</code></pre>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Loops in JavaScript</h2>
+                <h6>Loops are used when we want to repeat an action or run some code multiple times</h6>
+                <ul>
+                    <li>for Loop </li>
+                    <li>for…in Loop </li>
+                    <li>foreach Loop</li>
+                    <li>while Loop</li>
+                    <li>do…while Loop</li>
+                </ul>
+                <h5><b>for Loop</b></h5>
+                <h6>The for loop is used when we want to execute the set of statements for a certain number of times.</h6>
+                <h5><b>Example :</b></h5><pre class="language-javascript"><code>for(var j=1; j<=7; j++) 
+{
+console.log(j);
+}
+//check log in browser for output</code></pre>
+<hr>
+<h5><b>for…in Loop</b></h5>
+<h6>It is a special type of loop, used when we want to iterates over the properties of an object or the elements of an array.</h6>
+<h5><b>Example :</b></h5><pre class="language-javascript"><code>var person = {name: "Shree", language: "JavaScript", age: 28};
+for(var p in person) 
+{  
+console.log( p + " = " + person[p]); 
+}
+//check log in browser for output</code></pre>
+<hr>
+<h5><b>foreach Loop</b></h5>
+<h6>With the help of forEach loop, we can execute a function on each item within an array.</h6>
+<h5><b>Example :</b></h5><pre class="language-javascript"><code>const  evenno = [2,4,6,8,10];
+evenno.forEach(showen);
+ 
+function showen(item, index)
+{
+console.log(item);
+}
+//check log in browser for output</code></pre>
+    <hr>
+    <h5><b>while Loop</b></h5>
+    <h6>A while loop is used when we do not know how many times a certain block of code should execute.</h6>
+    <h5><b>Example :</b></h5><pre class="language-javascript"><code>let x = 1, y = 6;
+while (x <= y) 
+{
+console.log(x);
+x += 1;
+}
+//check log in browser for output</code></pre>
+<hr>
+<h5><b>do..While Loop</b></h5>
+<h6>In this loop, the body inside the do statement is executed first,then the condition is evaluated.</h6>
+<h5><b>Example :</b></h5><pre class="language-javascript"><code>let a = 1;
+let b =3;
+do {
+console.log(a);
+a++;
+} while(a <= b);
+//check log in browser for output</code></pre>
+
+
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>
