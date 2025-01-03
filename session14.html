@@ -125,24 +125,26 @@
                 <p>We have to crate constructor of ApplicationDbContext to establish connection with database </p>
                 <h3>Example:</h3>
                 <h4>ApplicationDbContext.cs File</h4>
-                <pre class="language-csharp"><code>using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-                    
-namespace Test.Web.Data
-{
+                <pre class="language-csharp"><code>
+    using Microsoft.EntityFrameworkCore;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Test.Web.Data
+    {
     public class ApplicationDbContext : DbContext
     {
-        //creating constructor
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
-        {
-            
-        }  
+    //creating constructor
+    public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options):base(options)
+    {
+
     }
-}</code></pre>
+    }
+    }
+</code></pre>
 <hr>
 <h2>Setting up connectionString in appSettings.json</h2>
                
